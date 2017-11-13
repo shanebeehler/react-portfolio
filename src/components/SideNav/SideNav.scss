@@ -1,0 +1,54 @@
+@import '../../styleVariables';
+
+.sideNav {
+  background-color: $burgundy;
+  z-index: 2;
+  flex-basis: 180px;
+  padding-top: 60px;
+  min-height: calc(100vh - 48px);
+  flex-shrink: 0;
+  color: white;
+
+  &__mobileCloseNav {
+    display: none;
+  }
+}
+
+.sideNav__link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.active {
+  color: $yellow;
+  font-style: italic;
+}
+
+@media(max-width: 767px) {
+  .sideNav {
+    position: fixed;
+    padding-top: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    &__mobileCloseNav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+      height: 60px;
+      padding-right: 18px;
+    }
+
+    &__close {
+      font-size: 28px;
+    }
+  }
+}

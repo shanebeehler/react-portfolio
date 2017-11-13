@@ -1,0 +1,15 @@
+.mainSection {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  // padding: 1rem;
+  min-height: calc(100vh - 48px);
+}
+
+@media(max-width: 767px) {
+  .mainSection {
+    // padding: 0.5rem;
+    min-height: calc(100vh - 60px);
+  }
+}

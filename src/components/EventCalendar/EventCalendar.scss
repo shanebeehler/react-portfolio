@@ -1,0 +1,74 @@
+@import '../../styleVariables';
+
+.events {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.calendar {
+  flex-basis: 100%;
+  border: $border;
+  height: fit-content;
+  max-width: 500px;
+  margin-bottom: 1rem;
+
+  &__monthRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+    height: 48px;
+    border-bottom: $border;
+    color: $brown;
+  }
+
+  &__month {
+    font-weight: bold;
+  }
+
+  &__monthToggle {
+    flex-basis: 50px;
+    height: 48px;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  &__weekdaysRow {
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: $brown;
+    font-weight: bold;
+    padding: 0;
+  }
+
+  &__weekday {
+    flex-basis: 14.285%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__dates {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
+@media(max-width: 767px) {
+  .events {
+    padding: 0.5rem;
+  }
+
+  .calendar {
+    flex-basis: 100%;
+    order: -1;
+    margin-bottom: 16px;
+    max-width: none;
+  }
+}

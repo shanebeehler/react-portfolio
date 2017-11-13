@@ -1,0 +1,67 @@
+@import '../../styleVariables';
+
+.landing {
+  background: #9B2D34;
+  height: calc(50vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  &__header {
+    color: $yellow;
+    font-size: 48px;
+    margin: 0;
+  }
+
+  &__subtext {
+    color: white;
+    font-size: 14px;
+    margin: 4px 0 0 0;
+  }
+}
+
+.about {
+  text-align: left;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__section {
+    flex-basis: 40%;
+    margin: 3rem 0;
+  }
+
+  &__header {
+    text-align: center;
+    color: $brown;
+  }
+}
+
+@media(max-width: 767px) {
+  .landing {
+    padding: 0.5rem;
+
+    &__header {
+      font-size: 32px;
+    }
+  }
+
+  .about {
+
+    &__section {
+      flex-basis: 100%;
+      margin: 1.5rem 0;
+    }
+
+    &__header {
+      margin: 0;
+      text-align: left;
+    }
+
+    &__paragraph {
+      margin-top: 8px;
+    }
+  }
+}

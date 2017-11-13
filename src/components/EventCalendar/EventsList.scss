@@ -1,0 +1,33 @@
+@import '../../styleVariables';
+
+.eventsList {
+  flex-basis: 100%;
+  max-width: 500px;
+  border: $border;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 1rem;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: $border;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__dateTime {
+    text-align: right;
+  }
+}
+
+@media(max-width: 767px) {
+  .eventsList {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../styleVariables';
+
+.calendarDate {
+  &__date {
+    flex-basis: 14.285%; //about 1/7 (7 days in week)
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative;
+  }
+
+  &__date--today {
+    font-weight: 800;
+    color: red;
+  }
+
+  &__event {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: $yellow;
+    bottom: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__eventName {
+    margin: 0;
+  }
+}

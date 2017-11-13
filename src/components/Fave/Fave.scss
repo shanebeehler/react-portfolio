@@ -1,0 +1,24 @@
+@import '../../styleVariables';
+
+.fave {
+  width: 50px;
+  height: 50px;
+  color: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+  background: transparent;
+}
+
+.fave__icon {
+  font-size: 24px;
+}
+
+.fave--faved {
+  color: $yellow;
+}

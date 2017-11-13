@@ -1,0 +1,19 @@
+@import '../../styleVariables';
+
+.bottomNav {
+  height: 80px;
+  width: 100%;
+  background: $burgundy;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    color: $yellow;
+  }
+
+  &__icon {
+    margin: 0 6px;
+  }
+}

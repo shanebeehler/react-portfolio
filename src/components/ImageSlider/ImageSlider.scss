@@ -1,0 +1,78 @@
+@import '../../styleVariables';
+
+.imageSlider {
+  padding: 1rem;
+  margin: 0;
+
+  &__imageContainer {
+    height: 400px;
+    overflow: hidden;
+    background: lightgray;
+  }
+
+  &__image {
+    height: 100%;
+    vertical-align: bottom;
+  }
+
+  &__controls {
+    margin-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border: 1px solid $burgundy;
+    background: $burgundy;
+    margin-bottom: 1rem;
+  }
+
+  &__toggle {
+    background: $burgundy;
+    width: 5rem;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+
+    &--minus {
+      left: 2rem;
+      border-right: 1px solid white;
+    }
+
+    &--plus {
+      right: 2rem;
+      border-left: 1px solid white;
+    }
+  }
+
+  &__numbers {
+    color: white;
+  }
+}
+
+.imageSlider--instructions {
+  display: flex;
+  padding: 1rem;
+}
+
+@media(max-width: 767px) {
+  .imageSlider {
+    padding: 0;
+
+    &__imageContainer {
+      height: auto;
+      overflow: hidden;
+    }
+
+    &__image {
+      height: auto;
+      width: 100%;
+    }
+
+    &__toggle {
+      width: 5rem;
+    }
+  }
+}

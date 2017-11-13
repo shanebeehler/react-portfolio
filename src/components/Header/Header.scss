@@ -1,0 +1,80 @@
+@import '../../styleVariables';
+
+.header {
+  display: flex;
+  flex-basis: 100%;
+  height: 48px;
+  overflow: hidden;
+  border-top: $border;
+  border-bottom: $border;
+
+  &__logoCol {
+    flex-basis: 180px;
+    overflow: hidden;
+  }
+
+  &__logo {
+    height: 50px;
+  }
+
+  &__navToggle {
+    flex-basis: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: $border;
+    border-right: $border;
+    cursor: pointer;
+  }
+
+  &__hamburger {
+    font-size: 22px;
+  }
+}
+
+.social {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    text-decoration: none;
+    color: $brown;
+    border: $border;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media(max-width: 767px) {
+  .header {
+    background: $burgundy;
+    color: white;
+    height: 60px;
+    border-top: none;
+
+    &__logoCol {
+      flex-basis: 50px;
+    }
+
+    &__navToggle {
+      margin-left: auto;
+      border-right: none;
+    }
+  }
+
+  .social {
+    margin-left: inherit;
+    order: -1;
+  }
+
+  .social__link {
+    color: white;
+  }
+}
