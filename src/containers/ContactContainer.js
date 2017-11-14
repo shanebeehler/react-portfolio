@@ -23,7 +23,7 @@ class ContactContainer extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    return fetch(`http://formspree.io/shanebeehler@me.com`, {
+    return fetch(`https://formspree.io/shanebeehler@me.com`, {
       method: 'POST',
       body: new FormData(this.state)
     })
