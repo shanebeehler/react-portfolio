@@ -23,8 +23,9 @@ class SideNav extends Component {
           <NavLink exact to='/'                 className="sideNav__link">Home</NavLink>
           <NavLink exact to='/fave-images'      className="sideNav__link">Fave Images</NavLink>
           <NavLink exact to='/image-slider'     className="sideNav__link">Image Slider</NavLink>
-          <NavLink exact to='/edit-information' className="sideNav__link">Display/Edit Info</NavLink>          
+          <NavLink exact to='/edit-information' className="sideNav__link">Display/Edit Info</NavLink>
           <NavLink exact to='/event-calendar'   className="sideNav__link">Event Calendar</NavLink>
+          <NavLink exact to='/contact'          className="sideNav__link">Contact</NavLink>          
         </nav>
       );
     }

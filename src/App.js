@@ -15,6 +15,7 @@ const AsyncImageIndexContainer    = asyncComponent(() => import('./containers/Im
 const AsyncImageSliderContainer   = asyncComponent(() => import('./containers/ImageSliderContainer'));
 const AsyncDisplayEditContainer   = asyncComponent(() => import('./containers/DisplayEditContainer'));
 const AsyncEventCalendarContainer = asyncComponent(() => import('./containers/EventCalendarContainer'));
+const AsyncContactContainer       = asyncComponent(() => import('./containers/ContactContainer'));
 
 class App extends Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class App extends Component {
             <Route path='/edit-information' component={AsyncDisplayEditContainer}/>
             <Route path='/image-slider'     component={AsyncImageSliderContainer}/>
             <Route path='/event-calendar'   component={AsyncEventCalendarContainer}/>
+            <Route path='/contact'          component={AsyncContactContainer}/>            
 
             {/* TIMELINE COMPONENT
             FAVOURITES COMPONENT */}
