@@ -1,6 +1,47 @@
 @import '../../styleVariables';
 
-.form {
+.contactPage {
+  width: 100%;
+  text-align: left;
+  border: 1px solid $yellow;
+
+  &--success {
+    border: 1px solid green;
+  }
+
+  &--error {
+    border: 1px solid red;
+  }
+
+  &__outer {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  &__topRow {
+    border-bottom: 1px solid $yellow;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__topRow--success {
+    border-bottom: 1px solid green;
+  }
+
+  &__topRow--error {
+    border-bottom: 1px solid red;
+  }
+
+  &__header {
+    margin: 0;
+    text-transform: capitalize;
+  }
+}
+
+.contact {
   padding: 0 1rem 1rem 1rem;
 
   &__inputCol {
@@ -9,8 +50,12 @@
     height: 2.5rem;
   }
 
+  &__inputCol--textarea {
+    height: 6.4rem;
+  }
+
   &__label {
-    flex-basis: 64px;
+    flex-basis: 78px;
   }
 
   &__input {
@@ -22,19 +67,8 @@
     font-family: inherit;
   }
 
-  &__input--phone {
-    &:first-of-type {
-      margin-left: 2rem;
-    }
-
-    margin-left: 8px;
-    padding-left: 4px;
-    width: 40px;
-    flex-grow: 0;
-
-    &:last-of-type {
-      width: 48px;
-    }
+  &__input--textarea {
+    height: 84px;
   }
 
   &__submit {
@@ -51,4 +85,8 @@
       background: lightgray;
     }
   }
+}
+
+.message {
+  padding: 0 1rem 1rem 1rem;
 }

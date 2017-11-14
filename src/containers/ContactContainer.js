@@ -7,9 +7,13 @@ class ContactContainer extends Component {
     super(props);
 
     this.state = {
-      name    : '',
-      email   : '',
-      message : ''
+      formState : {
+        name    : '',
+        email   : '',
+        message : ''
+      },
+      disableSendButton: false,
+      render: 'contact'
     }
 
     this.handleChange      = this.handleChange.bind(this);
@@ -17,11 +21,12 @@ class ContactContainer extends Component {
   }
 
   handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value });
+    this.setState({ formState: {...this.state.formState, [event.target.id]: event.target.value }});
   }
 
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({ disableSendButton: true} );
 
     return fetch(`https://formspree.io/shanebeehler@me.com`, {
       method: 'POST',
@@ -29,15 +34,15 @@ class ContactContainer extends Component {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.state)
+      body: JSON.stringify(this.state.formState)
     })
     .then(
       response => {
         if(response.status === 200){
-          console.log('Request succeeded with JSON response', response);
+          this.setState({ render: 'success' });
         }
         else {
-          // dispatch(fetchPostsError())
+          this.setState({ render: 'error' });
         }
       }
     )
@@ -46,9 +51,11 @@ class ContactContainer extends Component {
   render() {
     return (
       <Contact
-        formState={this.state}
+        formState={this.state.formState}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        disableSendButton={this.state.disableSendButton}
+        render={this.state.render}
       />
     );
   }
