@@ -12,3 +12,9 @@
     color: $burgundy;
   }
 }
+
+@media(max-width: 767px) {
+  .instructions {
+    margin-bottom: 0.5rem;
+  }
+}
