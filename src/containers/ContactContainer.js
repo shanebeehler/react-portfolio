@@ -25,7 +25,11 @@ class ContactContainer extends Component {
 
     return fetch(`https://formspree.io/shanebeehler@me.com`, {
       method: 'POST',
-      body: new FormData(this.state)
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
     })
     .then(
       response => {
