@@ -1,11 +1,12 @@
 import './ImageIndex.scss';
 import React, { Component } from 'react';
-import image1               from '../../assets/2.jpg';
-import image2               from '../../assets/3.jpg';
 import image3               from '../../assets/4.jpg';
-import image4               from '../../assets/5.jpg';
+import shaneAndZin          from '../../assets/shaneAndZin.jpg';
+import shaneAndZin2         from '../../assets/shaneAndZin2.jpg';
+import shaneAndKids         from '../../assets/shaneAndKids.jpg';
+import shaneAndAsh          from '../../assets/shaneAndAsh.jpg';
+import married              from '../../assets/married.jpg';
 import image5               from '../../assets/6.jpg';
-import image6               from '../../assets/7.jpg';
 import FaveContainer        from '../../containers/FaveContainer';
 import Instructions         from '../Instructions/Instructions';
 import { Link }             from 'react-router-dom';
@@ -15,7 +16,7 @@ class ImageIndex extends Component {
     super(props);
 
     this.state = {
-      images: [ image1, image2, image3, image4, image5, image6 ]
+      images: [ shaneAndZin, shaneAndZin2, shaneAndAsh, married, image3, image5 ]
     }
   }
 
