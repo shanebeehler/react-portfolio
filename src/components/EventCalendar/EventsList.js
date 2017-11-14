@@ -29,6 +29,10 @@ const EventsList = ({ prettifyDate, visibleEvents, month }) => {
 
   return (
     <div className='eventsList'>
+      <div className='eventsList__topRow'>
+        <h3 className='eventsList__header'>{month} Events</h3>
+      </div>
+
       {renderEventsListRows()}
     </div>
   );
