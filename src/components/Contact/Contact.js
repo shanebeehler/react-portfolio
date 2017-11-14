@@ -4,7 +4,7 @@ import React from 'react';
 const Contact = ({ formState, handleChange, handleSubmit, disableSendButton, render }) => {
 
   const renderFormOrMessage = () => {
-    if (render === 'contact') {
+    if (render === 'contact shane') {
       return (
         <form onSubmit={handleSubmit} className='contact' name='contact'>
           <div className='contact__inputCol'>

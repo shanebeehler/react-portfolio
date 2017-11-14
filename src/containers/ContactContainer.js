@@ -13,7 +13,7 @@ class ContactContainer extends Component {
         message : ''
       },
       disableSendButton: false,
-      render: 'contact'
+      render: 'contact shane'
     }
 
     this.handleChange      = this.handleChange.bind(this);
